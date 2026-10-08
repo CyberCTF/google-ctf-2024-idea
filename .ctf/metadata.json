@@ -1,0 +1,14 @@
+{
+  "title": "Google CTF 2024: IDEA",
+  "description": "A 3-round IDEA encryption service with a limited number of credits that lets you flip bits of its secret key between queries. Guess the original key to get the flag.",
+  "question": "Retrieve the flag from the challenge service.",
+  "category": "CRYPTO",
+  "difficulty": 4,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "idea-cipher",
+    "related-key-attack",
+    "block-cipher",
+    "cryptography"
+  ]
+}
