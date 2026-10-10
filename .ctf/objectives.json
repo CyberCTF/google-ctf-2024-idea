@@ -1,0 +1,53 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Guess the key",
+      "prompt": "Recover the service's secret key from related-key encryptions and get the flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "CTF{%s}"
+      },
+      "dev": "CTF{dev-google-ctf-2024-idea}",
+      "hints": [
+        "You choose how the key is changed between encryptions.",
+        "What do related keys tell you about IDEA's key schedule?"
+      ],
+      "steps": [
+        {
+          "key": "cipher",
+          "title": "Identify the cipher",
+          "prompt": "Which block cipher does the service use? (acronym)",
+          "check": {
+            "answer": [
+              "idea",
+              "international data encryption algorithm"
+            ]
+          }
+        },
+        {
+          "key": "rounds",
+          "title": "Count the rounds",
+          "prompt": "How many rounds does this reduced version use?",
+          "check": {
+            "answer_regex": "^(3|three)$"
+          }
+        },
+        {
+          "key": "attack",
+          "title": "Name the attack",
+          "prompt": "What class of attack compares encryptions under keys with a known difference?",
+          "check": {
+            "answer": [
+              "related-key",
+              "related key",
+              "related-key attack",
+              "related key attack",
+              "related-key differential"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
