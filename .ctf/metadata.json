@@ -1,8 +1,11 @@
 {
+  "project_name": "cyberlabs-google-ctf-2024-idea",
+  "slug": "google-ctf-2024-idea",
   "title": "Google CTF 2024: IDEA",
   "description": "A 3-round IDEA encryption service with a limited number of credits that lets you flip bits of its secret key between queries. Guess the original key to get the flag.",
-  "question": "Recover the IDEA key with related-key queries and get the flag.",
-  "category": "CRYPTO",
+  "category": "crypto",
   "difficulty": 3,
-  "evidence_kind": "SECRET"
+  "evidence_kind": "SECRET",
+  "capabilities": [],
+  "question": "Recover the IDEA key with related-key queries and get the flag."
 }
